@@ -1,0 +1,16 @@
+p.element{
+  color:red;
+  background-color:lightyellow;
+  }
+#unique{
+  color:blue;
+  background-color:lightgreen;
+  }
+ .highlight{
+  color:purple;
+  background-color:lightblue;
+  }
+ p.group{
+  color:white;
+  background-color:black;
+  }
