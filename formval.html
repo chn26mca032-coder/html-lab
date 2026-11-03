@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validate()">
+
+    Name:
+    <input type="text" id="name"><br><br>
+
+    Mobile:
+    <input type="text" id="mobile"><br><br>
+
+    Email:
+    <input type="text" id="email"><br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<script>
+function validate()
+{
+    var n = document.getElementById("name").value;
+    var m = document.getElementById("mobile").value;
+    var e = document.getElementById("email").value;
+
+    if(n == "" || m == "" || e == "")
+    {
+        alert("All fields are required");
+        return false;
+    }
+
+    if(!/^[0-9]{10}$/.test(m))
+    {
+        alert("Enter valid mobile number");
+        return false;
+    }
+
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e))
+    {
+        alert("Enter valid email");
+        return false;
+    }
+
+    alert("Form submitted successfully");
+    return true;
+}
+</script>
+
+</body>
+</html>
